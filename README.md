@@ -16,6 +16,15 @@
     然后
     npm rebuild node-sass
 
+    ----4
+    Uncaught ReferenceError: Vue is not defined
+    
+
 运行
     npx parcel
     npx parcel index.html
+
+
+编译中出现的
+
+    You are running Vue in development mode.Make sure to turn on production mode when deploying for production.
