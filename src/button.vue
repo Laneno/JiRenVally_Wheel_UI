@@ -1,5 +1,5 @@
 <template>
-    <button class="g-button">Button_First</button>
+    <button class="g-button"><slot></slot></button>
 </template>
 
 <script>
