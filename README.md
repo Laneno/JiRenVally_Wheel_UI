@@ -18,9 +18,10 @@
 
     ----4
     Uncaught ReferenceError: Vue is not defined
-    
+    Uncaught TypeError: Vue.version is undefined
 
 运行
+    npm i -D parcel-bundler@1.9.2
     npx parcel
     npx parcel index.html
 
@@ -28,3 +29,4 @@
 编译中出现的
 
     You are running Vue in development mode.Make sure to turn on production mode when deploying for production.
+    

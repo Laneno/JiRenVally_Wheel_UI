@@ -15,54 +15,35 @@
         }
 
         :root {
-            --button-height: 32px;
-            /*高度*/
-            --font-size: 14px;
-            /*字体*/
-            --button-bg: #F0FFFF;
-            /*背景*/
-            --button-active-bg: #eee;
-            /*背景-按下*/
-            --border-radius: 4px;
-            /*边框圆角*/
-            --color: #333;
-            /*文字颜色*/
-            --border-color: #999;
-            /*边框颜色*/
-            --border-color-hover: #666;
-            /*边框颜色-hover*/
+            --button-height: 32px;                /*高度*/
+            --font-size: 14px;                    /*字体*/
+            --button-bg: #F0FFFF;               /*背景*/
+            --button-active-bg: #eee;           /*背景-按下*/
+            --border-radius: 4px;                 /*边框圆角*/
+            --color: #333;                      /*文字颜色*/
+            --border-color: #999;               /*边框颜色*/
+            --border-color-hover: #D2691E;      /*边框颜色-hover*/
         }
         
     </style>
-    <style>
-        .g-button{
-            font-size: var(--font-size);
-            height: var(--button-height);
-            padding: 0 1em;         /*按钮左侧空一个字，不在按钮上加宽度width*/
-            border-radius: var(--border-radius);
-            border: 1px solid var(--border-color);
-            background: var(--button-bg);
-        }
-        .g-button:hover{            /*hover悬停时，边框变深*/
-            border-color: var(--border-color-hover);
-        }
-        .g-button:active{           /*active点击时，背景变深*/
-            background-color: var(--button-active-bg);
-        }
-        .g-button:focus{            /*去掉按钮点击的蓝色边框*/
-            outline: none;
-        }
-    </style>
+    
 </head>
 
 <body>
     <div id="app">
-        <g-button class="g-button"></g-button>
-        <!-- {{message}} -->
+        <g-button></g-button>
     </div>
+    <script src="./src/app.js"></script>
+    <!-- 
+        重构 button.js 为 button.vue单文件
+        可以用一个vue文件，表示这三种语言，html + css + js
+        但是需要构建工具，引入parcel
+ -->
 
-    <script src="./node_modules/vue/dist/vue.min.js"></script>
-    <script src="js/button.js"></script>
+
+    <!-- <script src="./node_modules/vue/dist/vue.min.js"></script> -->
+
+    <!-- <script src="js/button.js"></script>
     <script>
         new Vue({
             el: '#app',
@@ -70,7 +51,7 @@
             //     message:'This is a message for A'
             // }
         })
-    </script>
+    </script> -->
 </body>
 
 </html>
