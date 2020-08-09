@@ -1,5 +1,5 @@
 <template>
-    <button class="g-button">Button</button>
+    <button class="g-button">Button_First</button>
 </template>
 
 <script>
@@ -23,7 +23,5 @@ export default {}
             &:focus{            /*去掉按钮点击的蓝色边框*/
                 outline: none;
             }
-        }
-
-        
+        }        
 </style>
