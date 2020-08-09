@@ -26,14 +26,27 @@
         }
         
     </style>
-    
+    <style>
+        /*1em: 图标和字体大小一致*/
+        .icon{ width: 1em; height: 1em; }
+      </style>
 </head>
 
 <body>
-    <div id="app">
+    <!-- <div id="app">
         <g-button>Button_Second</g-button>
     </div>
+     -->
+
+     <div id="app">
+        <!-- <g-button>Button_Second</g-button> -->
+        <g-button><svg class="icon"><use xlink:href="#isettings"></use></svg>按钮传参</g-button>
+
+    </div>
+    
+
     <script src="./src/app.js"></script>
+    <script src="//at.alicdn.com/t/font_1995803_8hs31vflbao.js"></script>
     <!-- 
         重构 button.js 为 button.vue单文件
         可以用一个vue文件，表示这三种语言，html + css + js
