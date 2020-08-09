@@ -1,9 +1,7 @@
 <template>
     <button class="g-button">
-        <svg class="icon">
-            <!--:是 v-bind 缩写，动态赋值-->
-            <!--`#i-${icon}` 是一个js 字符串-->
-            <!--${data}是一个模板字符串的插值，来自props-->
+        <!--v-if="icon" 当不传 icon 时，icon 的占位消失-->
+        <svg v-if="icon" class="icon">
             <use :xlink:href="`#i-${icon}`"></use>
         </svg>
         <slot></slot>
