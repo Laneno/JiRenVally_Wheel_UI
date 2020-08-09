@@ -1,16 +1,26 @@
 <template>
-    <button class="g-button">
+    <!--如果iconPosition有值且为left，icon 在左侧，其他值(right)在右侧-->
+    <button class="g-button" v-if="!iconPosition || iconPosition === 'left'">
         <!--v-if="icon" 当不传 icon 时，icon 的占位消失-->
         <svg v-if="icon" class="icon">
+            <!--:是 v-bind 缩写，动态赋值-->
+            <!--`#i-${icon}` 是一个js 字符串-->
+            <!--${data}是一个模板字符串的插值，来自props-->
             <use :xlink:href="`#i-${icon}`"></use>
         </svg>
         <slot></slot>
+    </button>
+    <button class="g-button" v-else>
+        <slot></slot>
+        <svg v-if="icon" class="icon">
+            <use :xlink:href="`#i-${icon}`"></use>
+        </svg>
     </button>
 </template>
 <script>
     // props:组件通信
     export default {
-        props:['icon']
+        props:['icon', 'iconPosition']// left、right
     }
 </script>
 <style lang="scss">
