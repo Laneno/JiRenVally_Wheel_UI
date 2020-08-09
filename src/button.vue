@@ -1,9 +1,19 @@
 <template>
-    <button class="g-button"><slot></slot></button>
+    <button class="g-button">
+        <svg class="icon">
+            <!--:是 v-bind 缩写，动态赋值-->
+            <!--`#i-${icon}` 是一个js 字符串-->
+            <!--${data}是一个模板字符串的插值，来自props-->
+            <use :xlink:href="`#i-${icon}`"></use>
+        </svg>
+        <slot></slot>
+    </button>
 </template>
-
 <script>
-export default {}
+    // props:组件通信
+    export default {
+        props:['icon']
+    }
 </script>
 <style lang="scss">
         .g-button{
